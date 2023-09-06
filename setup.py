@@ -26,7 +26,5 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
-        "License :: OSI Approved :: BSD License",
-        "Development Status :: 4 - Beta",
     ],
 )
