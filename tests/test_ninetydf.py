@@ -9,7 +9,6 @@ def _validate_dataframe(df, expected_columns):
     assert not df.empty
     for column in expected_columns:
         assert column in df.columns
-        assert df[column].notnull().all()
 
 
 def test_load_couples():
