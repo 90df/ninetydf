@@ -3,11 +3,13 @@ requires = ["setuptools", "wheel"]
 
 [project]
 name = "ninetydf"
-version = "0.2"
+version = "0.3.0"
 description = "90 Day Fiancé dataframes"
 readme = "README.md"
 authors = [{ name = "90df" }]
 classifiers = [
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -16,11 +18,15 @@ classifiers = [
 ]
 dependencies = ["pandas", "importlib-resources; python_version<\"3.9\""]
 
+[project.urls]
+repository = "https://github.com/90df/ninetydf"
+license-file = "LICENSE.txt"
+
 [project.license]
 text = "MIT"
 
-[tool.project.dev-dependencies]
-pytest = "*"
+[project.optional-dependencies]
+dev = ["pytest"]
 
 [tool.project.packaging]
 include = ["src"]

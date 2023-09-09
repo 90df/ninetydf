@@ -2,10 +2,8 @@ from io import StringIO
 
 import pandas as pd
 
-# Attempt to use the standard library resources module if available (Python 3.9+).
-# Otherwise, fall back to the backported version.
 try:
-    from importlib.resources import files
+    from importlib.resources import files  # Stanadrd Python 3.9+
 except ImportError:
     from importlib_resources import files
 

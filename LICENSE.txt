@@ -23,8 +23,8 @@ SOFTWARE.
 Disclaimer on the Use of "90 Day Fiancé" Data:
 
 The data provided in this repository related to "90 Day Fiancé" (the "Data")
-is intended for educational and research purposes only. The Data might be copyrighted
-and/or subject to other legal protections. 
+is intended for educational and research purposes only. The Data might be 
+copyrighted and/or subject to other legal protections.
 By using the Data, users agree:
 
 1. Not to use the Data for commercial purposes.
