@@ -18,10 +18,10 @@ if __name__ == "__main__":
 
 ```
 
-**output**:
+**Output**:
 
 ```bash
-show_id      show_name  season      couple_name
+  show_id      show_name  season      couple_name
 0    90df  90 Day Fiancé       1     Russ & Paola
 1    90df  90 Day Fiancé       1   Alan & Kirlyam
 2    90df  90 Day Fiancé       1      Louis & Aya
@@ -36,3 +36,20 @@ show_id      show_name  season      couple_name
 ```
 
 
+## Disclaimer
+
+The data provided in this repository related to "90 Day Fiancé" (the "Data") 
+is intended for educational and research purposes only. The Data might be
+copyrighted and/or subject to other legal protections. 
+By using the Data, users agree:
+
+1. Not to use the Data for commercial purposes.
+2. To use the Data in a fair and ethical manner, respecting the rights of the original creators and copyright holders.
+3. That they are solely responsible for any legal implications or violations arising from their use of the Data.
+4. Not to distribute or reproduce the Data without explicit permission from the original copyright holders.
+5. To provide proper attribution when referencing the Data in any publications or outputs.
+
+**This repository and its maintainers are not affiliated with, endorsed by,
+or sponsored by the creators or copyright holders of "90 Day Fiancé".**
+Any use of the Data is at the user's own risk, and the maintainers 
+of this repository disclaim any and all liability related thereto.
