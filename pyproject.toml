@@ -6,7 +6,7 @@ name = "ninetydf"
 version = "0.1"
 description = "90 Day Fiancé dataframes"
 readme = "README.md"
-authors = [{ name = "ninety" }]
+authors = [{ name = "90df" }]
 classifiers = [
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
