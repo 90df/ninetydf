@@ -4,25 +4,29 @@ from ninetydf import couples, seasons
 from ninetydf.data import _load_data
 
 
+def _validate_dataframe(df, expected_columns):
+    assert isinstance(df, pd.DataFrame)
+    assert not df.empty
+    for column in expected_columns:
+        assert column in df.columns
+
+
 def test_load_couples():
-    assert isinstance(couples, pd.DataFrame)
-    assert not couples.empty
-    assert "show_id" in couples.columns
-    assert "couple_name" in couples.columns
-    assert couples["show_id"].notnull().all()
-    assert couples["couple_name"].notnull().all()
+    _validate_dataframe(couples, ["show_id", "couple_name"])
+
+    assert couples.loc[0, "show_id"] == "90df"
+    assert couples.loc[0, "couple_name"] == "Russ & Paola"
 
 
 def test_load_seasons():
-    assert isinstance(seasons, pd.DataFrame)
-    assert not seasons.empty
-    assert "show_id" in seasons.columns
-    assert "season" in seasons.columns
-    assert seasons["show_id"].notnull().all()
-    assert seasons["season"].notnull().all()
+    _validate_dataframe(seasons, ["show_id", "season", "start_date", "end_date"])
+
+    assert seasons.loc[0, "show_id"] == "90df"
+    assert seasons.loc[0, "season"] == 1
+    assert seasons.loc[0, "start_date"] == "2014-01-12"
+    assert seasons.loc[0, "end_date"] == "2014-02-23"
 
 
 def test_load_data_function():
     df = _load_data("seasons.csv")
-    assert not df.empty
-    assert isinstance(df, pd.DataFrame)
+    _validate_dataframe(df, ["show_id", "season", "start_date", "end_date"])
