@@ -20,9 +20,9 @@ jobs:
             toxenv: py39
           - python-version: 3.9
             toxenv: py39-nopandas
-          - python-version: 3.10
+          - python-version: "3.10"
             toxenv: py310
-          - python-version: 3.10
+          - python-version: "3.10"
             toxenv: py310-nopandas
           - python-version: 3.11
             toxenv: py311
