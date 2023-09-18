@@ -1,4 +1,20 @@
-from ninetydf import couples, seasons
+from dataclasses import asdict
+
+from ninetydf.models import Couple, Season
+
+try:
+    from ninetydf import couples_df, seasons_df
+
+    couples = [Couple(*row) for row in couples_df.values]
+
+    seasons_df["end_date"] = seasons_df["end_date"].fillna("")
+    seasons = [Season(*row) for row in seasons_df.values]
+
+except ImportError:
+    from ninetydf import couples_list, seasons_list
+
+    couples = couples_list
+    seasons = seasons_list
 
 SHOW_IDS = {
     "90 Day Fiancé": "90DF",
@@ -9,33 +25,55 @@ SHOW_IDS = {
 
 
 def test_couple_values():
-    assert couples.shape[0] == 172
-    assert couples.isna().sum().sum() == 0
-    assert (
-        len(couples["appearance_id"]) - len(couples["appearance_id"].drop_duplicates())
-        == 0
+    assert len(couples) == 172
+
+    missing_values = sum(
+        1
+        for couple in couples
+        if any(value is None for value in asdict(couple).values())
     )
+    assert missing_values == 0, "should be no missing values"
 
-    for _, couple in couples.iterrows():
+    appearance_ids = [couple.appearance_id for couple in couples]
+    assert len(appearance_ids) == len(
+        set(appearance_ids)
+    ), "`appearance_id` should be unique"
+
+    for couple in couples:
+        assert couple.appearance_id == f"{couple.couple_id}_{couple.season_id}"
+        assert couple.show_id == SHOW_IDS[couple.show_name]
         assert (
-            couple["appearance_id"] == couple["couple_id"] + "_" + couple["season_id"]
-        )
-        assert couple["show_id"] == SHOW_IDS[couple["show_name"]]
+            len(couple.couple_name.split(" & ")) == 2
+        ), "couple name should have `&` separator"
 
-        for column in couple.index:
-            if isinstance(couple[column], str):
-                assert couple[column].strip() == couple[column]
+        for value in asdict(couple).values():
+            if isinstance(value, str):
+                assert (
+                    value.strip() == value
+                ), "values should not have trailing white space"
 
 
 def test_season_values():
-    assert seasons.shape[0] == 27
-    assert seasons.isna().sum().sum() == 2
-    assert len(seasons["season_id"]) - len(seasons["season_id"].drop_duplicates()) == 0
+    assert len(seasons) == 27
 
-    for _, season in seasons.iterrows():
-        assert season["show_id"] == SHOW_IDS[season["show_name"]]
-        assert season["season_id"] == season["show_id"] + "_" + str(season["season"])
+    for season in seasons:
+        print(season.end_date)
 
-        for column in season.index:
-            if isinstance(season[column], str):
-                assert season[column].strip() == season[column]
+    missing_values = sum(
+        1 for season in seasons if any(not value for value in asdict(season).values())
+    )
+
+    assert missing_values == 2, "current seasons do not have end dates"
+
+    season_ids = [season.season_id for season in seasons]
+    assert len(season_ids) == len(set(season_ids)), "`season_id` should be unique"
+
+    for season in seasons:
+        assert season.show_id == SHOW_IDS[season.show_name]
+        assert season.season_id == f"{season.show_id}_{season.season}"
+
+        for value in asdict(season).values():
+            if isinstance(value, str):
+                assert (
+                    value.strip() == value
+                ), "values should not have trailing white space"
