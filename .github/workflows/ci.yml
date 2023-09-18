@@ -3,6 +3,23 @@ name: CI
 on: [pull_request]
 
 jobs:
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+
+      - name: Install black
+        run: pip install black
+
+      - name: Check code formatting
+        run: black --check .
+
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -28,7 +45,6 @@ jobs:
             toxenv: py311
           - python-version: 3.11
             toxenv: py311-nopandas
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
