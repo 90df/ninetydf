@@ -63,9 +63,6 @@ def test_couple_values():
 def test_season_values():
     assert len(seasons) == 27
 
-    for season in seasons:
-        print(season.end_date)
-
     missing_values = sum(
         1 for season in seasons if any(not value for value in asdict(season).values())
     )

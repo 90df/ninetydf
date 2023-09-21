@@ -1,16 +1,59 @@
 # ninetydf
 
-90 Day Fiancé dataframes
+90 Day Fiancé DataFrames
 
-## Example usage
+## Installing
+
+To use the DataFrames, install `pandas` separately or with the extra:
+
+```bash
+pip install ninetydf[pandas]
+```
+
+Without pandas, the data can be imported as a list of dataclasses.
+
+## Example with Data Classes
 
 ```python
-from ninetydf import couples, seasons
+from ninetydf import couples_list, seasons_list
 
 
 def main():
-    print(couples.head(10))
-    print(seasons.head(10))
+    for couple in couples_list[:5]:
+        print(couple)
+    for season in seasons_list[:5]:
+        print(season)
+
+
+if __name__ == "__main__":
+    main()
+
+```
+
+**Output**:
+
+```bash
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Russ & Paola', couple_id='russ_paola', appearance_id='russ_paola_90DF_1')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Alan & Kirlyam', couple_id='alan_kirlyam', appearance_id='alan_kirlyam_90DF_1')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Louis & Aya', couple_id='louis_aya', appearance_id='louis_aya_90DF_1')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Mike & Aziza', couple_id='mike_aziza', appearance_id='mike_aziza_90DF_1')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=2, season_id='90DF_2', couple_name='Chelsea & Yamir', couple_id='chelsea_yamir', appearance_id='chelsea_yamir_90DF_2')
+Season(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', start_date='2014-01-12', end_date='2014-02-23')
+Season(show_id='90DF', show_name='90 Day Fiancé', season=2, season_id='90DF_2', start_date='2014-10-19', end_date='2014-12-28')
+Season(show_id='90DF', show_name='90 Day Fiancé', season=3, season_id='90DF_3', start_date='2015-10-11', end_date='2015-12-06')
+Season(show_id='90DF', show_name='90 Day Fiancé', season=4, season_id='90DF_4', start_date='2016-08-22', end_date='2016-11-20')
+Season(show_id='90DF', show_name='90 Day Fiancé', season=5, season_id='90DF_5', start_date='2017-10-08', end_date='2017-12-18')
+```
+
+## Example with Pandas
+
+```python
+from ninetydf import couples_df, seasons_df
+
+
+def main():
+    print(couples_df.head(10))
+    print(seasons_df.head(10))
 
 
 if __name__ == "__main__":
@@ -30,7 +73,7 @@ if __name__ == "__main__":
 5    90DF  90 Day Fiancé       2    90DF_2  Danielle & Mohamed  danielle_mohamed  danielle_mohamed_90DF_2
 6    90DF  90 Day Fiancé       2    90DF_2     Justin & Evelin     justin_evelin     justin_evelin_90DF_2
 7    90DF  90 Day Fiancé       2    90DF_2        Brett & Daya        brett_daya        brett_daya_90DF_2
-8    90DF  90 Day Fiancé       2    90DF_2      Jason & Cássia      jason_cássia      jason_cássia_90DF_2
+8    90DF  90 Day Fiancé       2    90DF_2      Jason & Cássia      jason_cassia      jason_cassia_90DF_2
 9    90DF  90 Day Fiancé       2    90DF_2         Danny & Amy         danny_amy         danny_amy_90DF_2
   show_id                          show_name  season season_id  start_date    end_date
 0    90DF                      90 Day Fiancé       1    90DF_1  2014-01-12  2014-02-23
@@ -50,7 +93,8 @@ if __name__ == "__main__":
 The data provided in this repository related to "90 Day Fiancé" (the "Data")
 is intended for educational and research purposes only. The Data might be
 copyrighted and/or subject to other legal protections.
-By using the Data, users agree:
+
+Users agree to the following terms when using the Data:
 
 1. Not to use the Data for commercial purposes.
 2. To use the Data in a fair and ethical manner, respecting the rights of the original creators and copyright holders.
