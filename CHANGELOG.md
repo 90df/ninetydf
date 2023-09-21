@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.1 (2021-09-21)
+
+- Fix `Jason & Cássia` ids
+- Add test to ensure ids are normalized
+- Add docs on use without `pandas`
+
 ## 0.5.0 (2023-09-17)
 
 - Fix `michael_juliana` data
