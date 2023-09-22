@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0 (2021-09-21)
+
+- Add TLR data
+
 ## 0.5.1 (2021-09-21)
 
 - Fix `Jason & Cássia` ids

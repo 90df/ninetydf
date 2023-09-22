@@ -1,7 +1,8 @@
 try:
     import pandas as pd
+
     from ninetydf import couples_df, seasons_df
-    from ninetydf.data import _load_data
+    from ninetydf.df_loader import _load_data
 
     def _validate_dataframe(df, expected_columns):
         assert isinstance(df, pd.DataFrame)
