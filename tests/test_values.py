@@ -22,6 +22,7 @@ SHOW_IDS = {
     "90 Day Fiancé: Before the 90 Days": "B90",
     "90 Day Fiancé: The Other Way": "TOW",
     "90 Day Fiancé: Happily Ever After?": "HEA",
+    "90 Day: The Last Resort": "TLR",
 }
 
 
@@ -32,7 +33,7 @@ def normalize_string(s):
 
 
 def test_couple_values():
-    assert len(couples) == 172
+    assert len(couples) == 177
 
     missing_values = sum(
         1
@@ -61,7 +62,7 @@ def test_couple_values():
 
 
 def test_season_values():
-    assert len(seasons) == 27
+    assert len(seasons) == 28
 
     missing_values = sum(
         1 for season in seasons if any(not value for value in asdict(season).values())

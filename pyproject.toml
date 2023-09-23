@@ -3,8 +3,8 @@ requires = ["setuptools", "wheel"]
 
 [project]
 name = "ninetydf"
-version = "0.5.1"
-description = "90 Day Fiancé dataframes"
+version = "0.6.0"
+description = "90 Day Fiancé DataFrames"
 readme = "README.md"
 authors = [{ name = "90df" }]
 classifiers = [
