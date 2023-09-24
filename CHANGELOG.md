@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.1 (2023-09-23)
+
+- Fix `louis_gattone` id 
+
 ## 0.7.0 (2023-09-23)
 
 - Add `person_id_x` and `person_id_y` cols
