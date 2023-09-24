@@ -14,6 +14,8 @@ def test_load_couples():
     assert hasattr(couples[0], "couple_name")
     assert hasattr(couples[0], "couple_id")
     assert hasattr(couples[0], "appearance_id")
+    assert hasattr(couples[0], "person_id_x")
+    assert hasattr(couples[0], "person_id_y")
 
 
 def test_load_seasons():
