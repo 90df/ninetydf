@@ -1,10 +1,15 @@
 # Changelog
 
-## 0.6.0 (2021-09-21)
+## 0.7.0 (2023-09-23)
+
+- Add `person_id_x` and `person_id_y` cols
+- Fix `Tiffany & Ronald` rows
+
+## 0.6.0 (2023-09-21)
 
 - Add TLR data
 
-## 0.5.1 (2021-09-21)
+## 0.5.1 (2023-09-21)
 
 - Fix `Jason & Cássia` ids
 - Add test to ensure ids are normalized

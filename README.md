@@ -33,11 +33,11 @@ if __name__ == "__main__":
 **Output**:
 
 ```bash
-Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Russ & Paola', couple_id='russ_paola', appearance_id='russ_paola_90DF_1')
-Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Alan & Kirlyam', couple_id='alan_kirlyam', appearance_id='alan_kirlyam_90DF_1')
-Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Louis & Aya', couple_id='louis_aya', appearance_id='louis_aya_90DF_1')
-Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Mike & Aziza', couple_id='mike_aziza', appearance_id='mike_aziza_90DF_1')
-Couple(show_id='90DF', show_name='90 Day Fiancé', season=2, season_id='90DF_2', couple_name='Chelsea & Yamir', couple_id='chelsea_yamir', appearance_id='chelsea_yamir_90DF_2')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Alan & Kirlyam', couple_id='alan_kirlyam', appearance_id='alan_kirlyam_90DF_1', person_id_x='alan_cox', person_id_y='kirlyam')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Louis & Aya', couple_id='louis_aya', appearance_id='louis_aya_90DF_1', person_id_x='louis\xa0gattone', person_id_y='aya')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Mike & Aziza', couple_id='mike_aziza', appearance_id='mike_aziza_90DF_1', person_id_x='mike_eloshway', person_id_y='aziza_mazhidova')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Russ & Paola', couple_id='russ_paola', appearance_id='russ_paola_90DF_1', person_id_x='russ_mayfield', person_id_y='paola_blaze')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=2, season_id='90DF_2', couple_name='Brett & Daya', couple_id='brett_daya', appearance_id='brett_daya_90DF_2', person_id_x='brett_otto', person_id_y='daya_de_arce')
 Season(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', start_date='2014-01-12', end_date='2014-02-23')
 Season(show_id='90DF', show_name='90 Day Fiancé', season=2, season_id='90DF_2', start_date='2014-10-19', end_date='2014-12-28')
 Season(show_id='90DF', show_name='90 Day Fiancé', season=3, season_id='90DF_3', start_date='2015-10-11', end_date='2015-12-06')
@@ -64,17 +64,17 @@ if __name__ == "__main__":
 **Output**:
 
 ```bash
-  show_id      show_name  season season_id         couple_name         couple_id            appearance_id
-0    90DF  90 Day Fiancé       1    90DF_1        Russ & Paola        russ_paola        russ_paola_90DF_1
-1    90DF  90 Day Fiancé       1    90DF_1      Alan & Kirlyam      alan_kirlyam      alan_kirlyam_90DF_1
-2    90DF  90 Day Fiancé       1    90DF_1         Louis & Aya         louis_aya         louis_aya_90DF_1
-3    90DF  90 Day Fiancé       1    90DF_1        Mike & Aziza        mike_aziza        mike_aziza_90DF_1
-4    90DF  90 Day Fiancé       2    90DF_2     Chelsea & Yamir     chelsea_yamir     chelsea_yamir_90DF_2
-5    90DF  90 Day Fiancé       2    90DF_2  Danielle & Mohamed  danielle_mohamed  danielle_mohamed_90DF_2
-6    90DF  90 Day Fiancé       2    90DF_2     Justin & Evelin     justin_evelin     justin_evelin_90DF_2
-7    90DF  90 Day Fiancé       2    90DF_2        Brett & Daya        brett_daya        brett_daya_90DF_2
-8    90DF  90 Day Fiancé       2    90DF_2      Jason & Cássia      jason_cassia      jason_cassia_90DF_2
-9    90DF  90 Day Fiancé       2    90DF_2         Danny & Amy         danny_amy         danny_amy_90DF_2
+  show_id      show_name  season season_id         couple_name         couple_id            appearance_id       person_id_x      person_id_y
+0    90DF  90 Day Fiancé       1    90DF_1      Alan & Kirlyam      alan_kirlyam      alan_kirlyam_90DF_1          alan_cox          kirlyam
+1    90DF  90 Day Fiancé       1    90DF_1         Louis & Aya         louis_aya         louis_aya_90DF_1     louis gattone              aya
+2    90DF  90 Day Fiancé       1    90DF_1        Mike & Aziza        mike_aziza        mike_aziza_90DF_1     mike_eloshway  aziza_mazhidova
+3    90DF  90 Day Fiancé       1    90DF_1        Russ & Paola        russ_paola        russ_paola_90DF_1     russ_mayfield      paola_blaze
+4    90DF  90 Day Fiancé       2    90DF_2        Brett & Daya        brett_daya        brett_daya_90DF_2        brett_otto     daya_de_arce
+5    90DF  90 Day Fiancé       2    90DF_2     Chelsea & Yamir     chelsea_yamir     chelsea_yamir_90DF_2     chelsea_macek   yamir_castillo
+6    90DF  90 Day Fiancé       2    90DF_2  Danielle & Mohamed  danielle_mohamed  danielle_mohamed_90DF_2  danielle_mullins    mohamed_jbali
+7    90DF  90 Day Fiancé       2    90DF_2         Danny & Amy         danny_amy         danny_amy_90DF_2   danny_frishmuth              amy
+8    90DF  90 Day Fiancé       2    90DF_2      Jason & Cássia      jason_cassia      jason_cassia_90DF_2       jason_hitch   cassia_tavares
+9    90DF  90 Day Fiancé       2    90DF_2     Justin & Evelyn     justin_evelyn     justin_evelyn_90DF_2      justin_halas           evelyn
   show_id                          show_name  season season_id  start_date    end_date
 0    90DF                      90 Day Fiancé       1    90DF_1  2014-01-12  2014-02-23
 1    90DF                      90 Day Fiancé       2    90DF_2  2014-10-19  2014-12-28
