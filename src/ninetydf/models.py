@@ -10,6 +10,8 @@ class Couple:
     couple_name: str
     couple_id: str
     appearance_id: str
+    person_id_x: str
+    person_id_y: str
 
 
 @dataclass
