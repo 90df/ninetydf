@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 
 [project]
 name = "ninetydf"
-version = "0.7.0"
+version = "0.7.1"
 description = "90 Day Fiancé DataFrames"
 readme = "README.md"
 authors = [{ name = "90df" }]
