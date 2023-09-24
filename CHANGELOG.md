@@ -3,7 +3,7 @@
 ## 0.7.0 (2023-09-23)
 
 - Add `person_id_x` and `person_id_y` cols
-- Fix `Tiffany & Ronald` rows
+- Combine duplicate `Tiffany & Ronald` ids
 
 ## 0.6.0 (2023-09-21)
 
