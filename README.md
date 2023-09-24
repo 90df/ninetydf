@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
 ```bash
 Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Alan & Kirlyam', couple_id='alan_kirlyam', appearance_id='alan_kirlyam_90DF_1', person_id_x='alan_cox', person_id_y='kirlyam')
-Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Louis & Aya', couple_id='louis_aya', appearance_id='louis_aya_90DF_1', person_id_x='louis\xa0gattone', person_id_y='aya')
+Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Louis & Aya', couple_id='louis_aya', appearance_id='louis_aya_90DF_1', person_id_x='louis_gattone', person_id_y='aya')
 Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Mike & Aziza', couple_id='mike_aziza', appearance_id='mike_aziza_90DF_1', person_id_x='mike_eloshway', person_id_y='aziza_mazhidova')
 Couple(show_id='90DF', show_name='90 Day Fiancé', season=1, season_id='90DF_1', couple_name='Russ & Paola', couple_id='russ_paola', appearance_id='russ_paola_90DF_1', person_id_x='russ_mayfield', person_id_y='paola_blaze')
 Couple(show_id='90DF', show_name='90 Day Fiancé', season=2, season_id='90DF_2', couple_name='Brett & Daya', couple_id='brett_daya', appearance_id='brett_daya_90DF_2', person_id_x='brett_otto', person_id_y='daya_de_arce')
@@ -66,7 +66,7 @@ if __name__ == "__main__":
 ```bash
   show_id      show_name  season season_id         couple_name         couple_id            appearance_id       person_id_x      person_id_y
 0    90DF  90 Day Fiancé       1    90DF_1      Alan & Kirlyam      alan_kirlyam      alan_kirlyam_90DF_1          alan_cox          kirlyam
-1    90DF  90 Day Fiancé       1    90DF_1         Louis & Aya         louis_aya         louis_aya_90DF_1     louis gattone              aya
+1    90DF  90 Day Fiancé       1    90DF_1         Louis & Aya         louis_aya         louis_aya_90DF_1     louis_gattone              aya
 2    90DF  90 Day Fiancé       1    90DF_1        Mike & Aziza        mike_aziza        mike_aziza_90DF_1     mike_eloshway  aziza_mazhidova
 3    90DF  90 Day Fiancé       1    90DF_1        Russ & Paola        russ_paola        russ_paola_90DF_1     russ_mayfield      paola_blaze
 4    90DF  90 Day Fiancé       2    90DF_2        Brett & Daya        brett_daya        brett_daya_90DF_2        brett_otto     daya_de_arce

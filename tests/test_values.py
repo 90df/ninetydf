@@ -52,6 +52,10 @@ def test_couple_values():
         couple_id_parts = couple.couple_name.split(" & ")
         assert len(couple_id_parts) == 2
 
+        for id_val in [couple.person_id_x, couple.person_id_y]:
+            assert id_val == str.lower(normalize_string(id_val))
+            assert len(id_val.split(" ")) == 1
+
         assert couple.couple_id == str.lower(
             normalize_string(couple_id_parts[0] + "_" + couple_id_parts[1])
         )
